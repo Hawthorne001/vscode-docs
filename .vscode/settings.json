@@ -25,5 +25,40 @@
     "editor.codeActionsOnSave": {
         "source.organizeLinkDefinitions": "explicit"
     },
-    "markdown.editor.filePaste.videoSnippet": "<video src=\"${src}\" title=\"${title}\" autoplay loop controls muted></video>"
+    "markdown.editor.filePaste.videoSnippet": "<video src=\"${src}\" title=\"${title}\" autoplay loop controls muted></video>",
+    "workbench.editor.defaultBinaryEditor": "vscode.markdown.preview.editor",
+    "workbench.editor.enablePreviewFromCodeNavigation": true,
+    "workbench.editor.enablePreviewFromQuickOpen": true,
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.editor.scrollToSwitchTabs": true,
+    "workbench.editor.wrapTabs": true,
+    "workbench.editor.closeOnFileDelete": true,
+    "workbench.editor.centeredLayoutFixedWidth": true,
+    "workbench.editor.autoLockGroups": {
+        "gitlens.rebase": true,
+        "mainThreadWebview-markdown.preview": true,
+        "workbench.input.interactive": true,
+        "default": true,
+        "vscode.videoPreview": true,
+        "imagePreview.previewEditor": true,
+        "vscode.audioPreview": true,
+        "workbench.editor.chatSession": true,
+        "workbench.editors.gettingStartedInput": true,
+        "github-issues": true,
+        "jupyter-notebook": true,
+        "mfcobol-notebook": true,
+        "workbench.editorinputs.searchEditorInput": true,
+        "repl": true
+    },
+    "workbench.editor.labelFormat": "long",
+    "workbench.editor.limit.enabled": true,
+    "workbench.editor.limit.excludeDirty": true,
+    "workbench.editor.limit.perEditorGroup": true,
+    "workbench.editor.navigationScope": "editor",
+    "workbench.editor.preferHistoryBasedLanguageDetection": true,
+    "workbench.editor.revealIfOpen": true,
+    "workbench.editor.sharedViewState": true,
+    "terminal.integrated.commandsToSkipShell": [
+        ""
+    ]
 }
