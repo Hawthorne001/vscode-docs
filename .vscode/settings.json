@@ -25,5 +25,8 @@
     "editor.codeActionsOnSave": {
         "source.organizeLinkDefinitions": "explicit"
     },
-    "markdown.editor.filePaste.videoSnippet": "<video src=\"${src}\" title=\"${title}\" autoplay loop controls muted></video>"
+    "markdown.editor.filePaste.videoSnippet": "<video src=\"${src}\" title=\"${title}\" autoplay loop controls muted></video>",
+    "yaml.schemas": {
+        "https://ms-python.vscode-unpkg.net/ms-python/python/2024.16.1%2Bweb/extension/schemas/conda-environment.json": "vscode-vfs://github%2B7b2276223a312c22726566223a7b2274797065223a342c226964223a226d61696e227d7d/microsoft/vscode-docs/.pipelines/onebranch.official.yml"
+    }
 }

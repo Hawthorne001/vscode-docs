@@ -1,4 +1,8 @@
-trigger:
+
+triggertriggertrigger
+    - .devcontainer
+
+triggertriggertriggertriggertrigger:
   batch: true
   branches:
     include:
