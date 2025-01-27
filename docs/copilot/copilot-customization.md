@@ -4,7 +4,7 @@ Area: copilot
 TOCTitle: Customizing Copilot
 ContentId: 16c73175-a606-4aab-8ae5-a507fe8947eb
 PageTitle: Customize GitHub Copilot in VS Code
-DateApproved: 10/29/2024
+DateApproved: 12/11/2024
 MetaDescription: Learn how you can customize how GitHub Copilot generates code or tests for your project by defining a set of instructions.
 MetaSocialImage: images/shared/github-copilot-social.png
 ---
@@ -20,11 +20,18 @@ You can specify custom instructions for specific purposes:
 
 * **Test-generation instructions** - provide context specific for generating tests. For example, you can specify that all generated tests should use a specific testing framework. You can specify test-generation instructions in settings, or in a Markdown file in your workspace.
 
+* **Code review instructions** - provide context specific for reviewing the current editor selection. For example, you can specify that the reviewer should look for a specific type of error in the code. You can specify review-selection instructions in settings, or in a Markdown file in your workspace.
+
+* **Commit message generation instructions** - provide context specific for generating commit messages. You can specify commit-message-generation instructions in settings, or in a Markdown file in your workspace.
+
 Custom instructions consist of natural language instructions and should be short, self-contained statements that add context or relevant information to supplement chat questions.
 
 ## Define code-generation custom instructions
 
 Copilot can help you generate code, for example as part of a refactoring, generating unit tests, or implementing a feature. You might have specific libraries you want to use in your project, or a particular coding style you want to follow for the code that Copilot generates.
+
+> [!NOTE]
+> Copilot does not apply code-generation instructions for [code completions](/docs/copilot/ai-powered-suggestions.md).
 
 ### Use settings
 
@@ -58,8 +65,10 @@ Always add comments.
 
 You can also store custom instructions in your workspace or repository in a `.github/copilot-instructions.md` file and have VS Code automatically picks up this file.
 
+If you define custom instructions in both the `.github/copilot-instructions.md` file and in settings, Copilot tries to combine instructions from both sources.
+
 > [!NOTE]
-> GitHub Copilot in Visual Studio also detect the `.github/copilot-instructions.md` file. If you have a workspace that you use in both VS Code and Visual Studio, you can use the same file to define custom instructions for both editors.
+> GitHub Copilot in Visual Studio also detects the `.github/copilot-instructions.md` file. If you have a workspace that you use in both VS Code and Visual Studio, you can use the same file to define custom instructions for both editors.
 
 1. Set the `setting(github.copilot.chat.codeGeneration.useInstructionFiles)` setting to `true` to instruct Copilot in VS Code to use the custom instructions file.
 
@@ -76,7 +85,7 @@ You can also store custom instructions in your workspace or repository in a `.gi
 
 You can use Copilot to generate tests for your code, for example by using the `@workspace /tests` prompt in the Chat view. You can define custom instructions to help Copilot generate tests that are specific to your project and development workflow.
 
-To configure custom test-generation instructions, use the `setting(github.copilot.chat.testGeneration.instructions)` setting. You can define custom instructions at the User or Workspace level, and you can also specify language-specific instructions. Get more information about [language-specific settings](/docs/getstarted/settings.md#language-specific-editor-settings). For example, you might specify a different testing framework to use for each language.
+To configure custom test-generation instructions, use the `setting(github.copilot.chat.testGeneration.instructions)` setting. You can define custom instructions at the User or Workspace level.
 
 The following code snippet shows how to define a set of instructions in the `settings.json` file. To define instruction directly in settings, configure the `text` property. To reference an external file, configure the `file` property.
 
@@ -102,21 +111,33 @@ Always add code comments.
 Always use React functional components.
 ```
 
+## Define code review custom instructions
+
+You can use Copilot to review a selection of code in the editor. You can define custom instructions to help Copilot take into account specific code review criteria that are relevant to your project and development workflow.
+
+To configure custom code review instructions, use the `setting(github.copilot.chat.reviewSelection.instructions)` setting. You can define custom instructions at the User or Workspace level.
+
+## Define commit message generation custom instructions
+
+In the Source Control view, you can use Copilot to generate a commit message for the pending code changes. You can define custom instructions to help Copilot generate a commit message that takes into account specific formatting and structure that are specific to your project and development workflow.
+
+To configure custom commit message generation instructions, use the `setting(github.copilot.chat.commitMessageGeneration.instructions)` setting. You can define custom instructions at the User or Workspace level.
+
 ## Tips for defining custom instructions
 
 * Keep your instructions short and self-contained. Each instruction should be a single, simple statement. If you need to provide multiple pieces of information, use multiple instructions.
 
-* Don't refer to external resources in the instructions, such as specific coding standards,
-
-* Define language-specific instructions to get more accurate generated code for each language.
+* Don't refer to external resources in the instructions, such as specific coding standards.
 
 * Make it easy to share custom instructions with your team or across projects by storing your instructions in an external file. You can also version control the file to track changes over time.
 
 ## Settings
 
-* `setting(github.copilot.chat.codeGeneration.instructions)` <i class="codicon codicon-beaker"></i>: A set of instructions that are added to Copilot requests that generate code.
-* `setting(github.copilot.chat.codeGeneration.useInstructionFiles)` <i class="codicon codicon-beaker"></i>: Controls whether code instructions from `.github/copilot-instructions.md` are added to Copilot requests.
-* `setting(github.copilot.chat.testGeneration.instructions)` <i class="codicon codicon-beaker"></i>: A set of instructions that are added to Copilot requests that generate tests.
+* `setting(github.copilot.chat.codeGeneration.instructions)` <i class="codicon codicon-beaker"></i>: A set of instructions that will be added to Copilot requests that generate code.
+* `setting(github.copilot.chat.codeGeneration.useInstructionFiles)` _(Preview)_: Controls whether code instructions from `.github/copilot-instructions.md` are added to Copilot requests.
+* `setting(github.copilot.chat.testGeneration.instructions)` <i class="codicon codicon-beaker"></i>: A set of instructions that will be added to Copilot requests that generate tests.
+* `setting(github.copilot.chat.reviewSelection.instructions)` _(Preview)_: A set of instructions that will be added to Copilot requests for reviewing the current editor selection.
+* `setting(github.copilot.chat.commitMessageGeneration.instructions)` <i class="codicon codicon-beaker"></i>: A set of instructions that will be added to Copilot requests that generate commit messages.
 
 ## Related content
 
