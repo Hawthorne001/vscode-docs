@@ -4,38 +4,68 @@ Area: copilot
 TOCTitle: Overview
 ContentId: 0aefcb70-7884-487f-953e-46c3e07f7cbe
 PageTitle: GitHub Copilot overview
-DateApproved: 10/29/2024
-MetaDescription: Enhance your coding with AI-powered suggestions and chat conversations with GitHub Copilot in Visual Studio Code.
+DateApproved: 02/06/2025
+MetaDescription: Copilot is your AI pair programmer in VS Code. Code faster with completions and Inline Chat. Build features or resolve bugs with Copilot Edits, and explore your codebase using chat.
 MetaSocialImage: images/shared/github-copilot-social.png
 ---
 # GitHub Copilot in VS Code
 
-The [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) extension is an AI pair programmer tool that helps you write code faster and smarter. You can use the Copilot extension in Visual Studio Code to generate code, learn from the code it generates, and even configure your editor.
+[GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) is your AI pair programmer tool in Visual Studio Code. Get code suggestions as you type or use Inline Chat in the editor to write code faster. Add new functionality or resolve bugs across your project with Copilot Edits, or use natural language in chat to explore your codebase.
 
-With GitHub Copilot in VS Code you can:
+> [!TIP]
+> If you don't yet have a Copilot subscription, you can use Copilot for free by signing up for the [Copilot Free plan](https://github.com/github-copilot/signup) and get a monthly limit of completions and chat interactions.
 
-* Get inline code suggestions while you're writing and iterating on code.
-* Start a chat conversation to generate or refactor source code, produce documentation comments, or generate unit tests.
-* Get help with fixing errors in your code, or resolve errors while running commands in the terminal.
-* Ask questions to help ramp-up on a new code base, or accelerate learning a new programming language or framework.
-* Use chat features to discover and configure your VS Code setup.
+GitHub Copilot can provide assistance in a variety of scenarios.
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/jXp5D5ZnxGM" title="Get to know GitHub Copilot in VS Code" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="card-grid">
+<a href="#_code-completions-in-the-editor" class="card">
+    <i class="codicon codicon-keyboard"></i>
+    <p class="card-title">Get code suggestions as you type</p>
+</a>
+<a href="#_iterate-on-large-changes-across-multiple-files" class="card">
+    <i class="codicon codicon-edit-session"></i>
+    <p class="card-title">Make large changes across multiple files</p>
+</a>
+<a href="#_answer-coding-questions" class="card">
+    <i class="codicon codicon-comment-discussion"></i>
+    <p class="card-title">Ask questions about your code</p>
+</a>
+<a href="#_code-refactoring-and-improvements" class="card">
+    <i class="codicon codicon-lightbulb"></i>
+    <p class="card-title">Refactor and improve your code</p>
+</a>
+<a href="#_fix-issues" class="card">
+    <i class="codicon codicon-debug"></i>
+    <p class="card-title">Fix code issues and debugging</p>
+</a>
+<a href="#_jumpstart-your-project" class="card">
+    <i class="codicon codicon-new-file"></i>
+    <p class="card-title">Scaffold a new project or files</p>
+</a>
+<a href="#_generate-unit-test-cases" class="card">
+    <i class="codicon codicon-beaker"></i>
+    <p class="card-title">Configure and generate tests</p>
+</a>
+<a href="#_generate-code-documentation" class="card">
+    <i class="codicon codicon-book"></i>
+    <p class="card-title">Generate code documentation</p>
+</a>
+<a href="#_productivity-improvements" class="card">
+    <i class="codicon codicon-sparkle"></i>
+    <p class="card-title">Improve your productivity in VS Code</p>
+</a>
+</div>
 
-## Prerequisites
+## Getting started
 
-* To use GitHub Copilot in VS Code, you must have the [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) extension. When you install this extension, the [GitHub Copilot Chat](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-chat) extension is also installed.
+1. Select **Use AI Features with Copilot for Free...** from the Copilot menu in the VS Code title bar
 
-    > <a class="install-extension-btn" href="vscode:extension/GitHub.copilot">Install the GitHub Copilot extension</a>
+1. Sign in with your GitHub account to use Copilot
 
-* To use GitHub Copilot, you must have an active subscription for GitHub Copilot in your personal account, or you need to be assigned a seat by your organization. Sign up for a [GitHub Copilot free trial](https://github.com/login?return_to=%2fgithub-copilot%2fsignup) in your personal account.
+    > [!TIP]
+    > You can get started for free with the [Copilot Free plan](https://github.com/github-copilot/signup) if you don't yet have a Copilot subscription. Follow the steps in the [setup guide](/docs/copilot/setup.md) to set up a Copilot subscription.
 
-Follow these steps to [Set up GitHub Copilot in VS Code](/docs/copilot/setup.md).
-
-## Copilot tutorials
-
-* [GitHub Copilot Quickstart](/docs/copilot/getting-started.md) - discover the key features of GitHub Copilot in VS Code.
-* [Copilot Chat Tutorial](/docs/copilot/getting-started-chat.md) - get started with AI chat conversations.
+1. Discover the key features of Copilot in VS Code with our [Copilot Quickstart](/docs/copilot/getting-started.md).
 
 ## Keyboard shortcuts
 
@@ -52,23 +82,15 @@ Check our [Copilot cheat sheet](/docs/copilot/copilot-vscode-features.md) for an
 
 ## Use cases for GitHub Copilot in VS Code
 
-GitHub Copilot can provide assistance in a variety of scenarios:
-
-* [Code completions in the editor](#code-completions-in-the-editor)
-* [Iterate on large changes across multiple files](#iterate-on-large-changes-across-multiple-files)
-* [Answer coding questions](#answer-coding-questions)
-* [Code refactoring and improvements](#code-refactoring-and-improvements)
-* [Fix coding issues](#fix-issues)
-* [Jumpstart your project](#jumpstart-your-project)
-* [Generate unit test cases](#generate-unit-test-cases)
-* [Generate code documentation](#generate-code-documentation)
-* [Improve your productivity in VS Code](#productivity-improvements)
-
 ### Code completions in the editor
 
 * **Copilot suggests code as you type**. Copilot analyzes the context in the file you're editing and related files, and offers suggestions from within the editor. For example, begin typing the name of a method and Copilot suggests the implementation, following your coding style.
 
     ![Inline chat suggests the implementation of a 'CalculateDaysBetweenDates' JavaScript function](images/overview/js-suggest.png)
+
+* **Predict your next code edit** with Copilot Next Edit Suggestions (Copilot NES) (preview). Based on the edits you're making, Copilot NES both predicts the location of the next edit you'll want to make and what that edit should be. Use the `kbstyle(Tab)` key to quickly navigate and accept suggestions. Learn how to get started with [Copilot NES](/docs/copilot/ai-powered-suggestions.md#next-edit-suggestions-preview).
+
+    ![Copilot NES for adding z to distance calculation of Point3D](images/overview/point3d-distance.png)
 
 ### Iterate on large changes across multiple files
 
@@ -94,17 +116,17 @@ GitHub Copilot can provide assistance in a variety of scenarios:
 
 * **Provide suggestions for implementing code refactorings**. Copilot suggests refactorings using the context of your codebase. For example, ask Copilot to refactor a function to not use recursion, or to suggest an algorithm that can improve performance.
 
-    ![Inline chat refactoring to use different sorting algorithm](images/overview/inline-chat-convert-sort.png)
+    ![Inline Chat refactoring to use different sorting algorithm](images/overview/inline-chat-convert-sort.png)
 
 * **Suggest potential improvements to selected code**, such as improved handling of errors and edge cases, or changes to the logical flow to make the code more readable.
 
-    ![Copilot inline chat suggesting improvements to error handling](images/overview/copilot-inline-chat-error-handling.png)
+    ![Copilot Inline Chat suggesting improvements to error handling](images/overview/copilot-inline-chat-error-handling.png)
 
 ### Fix issues
 
 * **Propose a fix for bugs in your code** with the `/fix` command by suggesting code snippets and solutions based on the context of the error or issue. For example, if your code produces an error message or warning, Copilot Chat can suggest possible fixes based on the error message, the code's syntax, and the surrounding code. The changes might consist of changes to variables, control structures, or function calls that could resolve the issue.
 
-    ![Inline chat /fix for an error proposing to install a missing library](images/overview/inline-chat-fix-error-message-example.png)
+    ![Inline Chat /fix for an error proposing to install a missing library](images/overview/inline-chat-fix-error-message-example.png)
 
 * **Propose a fix for failing tests** (preview). When you run automated tests for your code, Copilot can suggest code fixes for tests that fail with the `/fixTestFailure` command.
 
@@ -162,7 +184,7 @@ GitHub Copilot can provide assistance in a variety of scenarios:
 
     ![Search view showing semantic search results that are not an exact match for the search criteria.](images/overview/semantic-search-results.png)
 
-* **Use terminal inline chat** to ask questions about the terminal or how to use specific shell commands. For example, you can ask questions such as "list the top 5 largest files in the src directory", or "how to enable shell integration".
+* **Use terminal Inline Chat** to ask questions about the terminal or how to use specific shell commands. For example, you can ask questions such as "list the top 5 largest files in the src directory", or "how to enable shell integration".
 
     ![Screenshot showing that you can ask complex questions like "list the top 5 largest files in the src dir"](images/overview/terminal-chat-2.png)
 
@@ -177,5 +199,3 @@ GitHub Copilot can provide assistance in a variety of scenarios:
 You can read more about Copilot and how to use it in VS Code in the [GitHub Copilot documentation](https://docs.github.com/copilot/getting-started-with-github-copilot?tool=vscode).
 
 Or check out the [VS Code Copilot Series](https://www.youtube.com/playlist?list=PLj6YeMhvp2S5_hvBl2SE-7YCHYlLQ0bPt) on YouTube, where you can find more introductory content and programming-specific videos for using Copilot with [Python](https://www.youtube.com/watch?v=DSHfHT5qnGc), [C#](https://www.youtube.com/watch?v=VsUQlSyQn1E), [Java](https://www.youtube.com/watch?v=zhCB95cE0HY), [PowerShell](https://www.youtube.com/watch?v=EwtRzAFiXEM), [C++](https://www.youtube.com/watch?v=ZfT2CXY5-Dc), and more.
-
-Check our [Advanced Features](https://www.youtube.com/watch?v=SLMfhuptCo8) video on YouTube for in-depth coverage of using Copilot for refactoring, context-based suggestions, unit tests, and more.

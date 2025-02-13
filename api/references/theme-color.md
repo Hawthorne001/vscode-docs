@@ -1,7 +1,7 @@
 ---
 # DO NOT TOUCH — Managed by doc writer
 ContentId: 8e03996d-35e9-4e9f-a60e-50d0962231b8
-DateApproved: 10/29/2024
+DateApproved: 02/06/2025
 
 # Summarize the whole topic in less than 300 characters for SEO purpose
 MetaDescription: Theme Color reference that lists all themable colors in Visual Studio Code.
@@ -249,6 +249,7 @@ The Side Bar contains views like the Explorer and Search.
 - `sideBarSectionHeader.border`: Side bar section header border color.
 - `sideBarActivityBarTop.border`: Border color between the activity bar at the top/bottom and the views.
 - `sideBarTitle.background`: Side bar title background color. The side bar is the container for views like explorer and search.
+- `sideBarTitle.border`: Side bar title border color on the bottom, separating the title from the views. The side bar is the container for views like explorer and search.
 - `sideBarStickyScroll.background`: Background color of sticky scroll in the side bar.
 - `sideBarStickyScroll.border`: Border color of sticky scroll in the side bar.
 - `sideBarStickyScroll.shadow`: Shadow color of sticky scroll in the side bar.
@@ -274,6 +275,7 @@ The Minimap shows a minified version of the current file.
 - `minimapGutter.addedBackground`: Minimap gutter color for added content.
 - `minimapGutter.modifiedBackground`: Minimap gutter color for modified content.
 - `minimapGutter.deletedBackground`: Minimap gutter color for deleted content.
+- `editorMinimap.inlineChatInserted`: Minimap marker color for inline chat inserted content.
 
 ## Editor Groups & Tabs
 
@@ -595,6 +597,28 @@ The editor comments widget can be seen when reviewing pull requests:
 - `editorCommentsWidget.rangeActiveBackground`: Color of background for currently selected or hovered comment range.
 - `editorCommentsWidget.replyInputBackground`: Background color for comment reply input box.
 
+Editor inline edits can be seen when using Copilot to suggest the next change to make:
+
+- `inlineEdit.gutterIndicator.primaryForeground`: Foreground color for the primary inline edit gutter indicator.
+- `inlineEdit.gutterIndicator.primaryBackground`: Background color for the primary inline edit gutter indicator.
+- `inlineEdit.gutterIndicator.secondaryForeground`: Foreground color for the secondary inline edit gutter indicator.
+- `inlineEdit.gutterIndicator.secondaryBackground`: Background color for the secondary inline edit gutter indicator.
+- `inlineEdit.gutterIndicator.successfulForeground`: Foreground color for the successful inline edit gutter indicator.
+- `inlineEdit.gutterIndicator.successfulBackground`: Background color for the successful inline edit gutter indicator.
+- `inlineEdit.gutterIndicator.background`: Background color for the inline edit gutter indicator.
+- `inlineEdit.indicator.foreground`: Foreground color for the inline edit indicator.
+- `inlineEdit.indicator.background`: Background color for the inline edit indicator.
+- `inlineEdit.indicator.border`: Border color for the inline edit indicator.
+- `inlineEdit.originalBackground`: Background color for the original text in inline edits.
+- `inlineEdit.modifiedBackground`: Background color for the modified text in inline edits.
+- `inlineEdit.originalChangedLineBackground`: Background color for the changed lines in the original text of inline edits.
+- `inlineEdit.originalChangedTextBackground`: Overlay color for the changed text in the original text of inline edits.
+- `inlineEdit.modifiedChangedLineBackground`: Background color for the changed lines in the modified text of inline edits.
+- `inlineEdit.modifiedChangedTextBackground`: Overlay color for the changed text in the modified text of inline edits.
+- `inlineEdit.originalBorder`: Border color for the original text in inline edits.
+- `inlineEdit.modifiedBorder`: Border color for the modified text in inline edits.
+- `inlineEdit.wordReplacementView.background`: Background color for the inline edit word replacement view.
+
 ## Diff editor colors
 
 For coloring inserted and removed text, use either a background or a border color but not both.
@@ -762,6 +786,7 @@ Panels are shown below the editor area and contain views like Output and Integra
 - `panelTitle.activeBorder`: Border color for the active panel title.
 - `panelTitle.activeForeground`: Title color for the active panel.
 - `panelTitle.inactiveForeground`: Title color for the inactive panel.
+- `panelTitle.border`: Panel title border color on the bottom, separating the title from the views. Panels are shown below the editor area and contain views like output and integrated terminal.
 - `panelInput.border`: Input box border for inputs in the panel.
 - `panelSection.border`: Panel section border color used when multiple views are stacked horizontally in the panel. Panels are shown below the editor area and contain views like output and integrated terminal.
 - `panelSection.dropBackground`: Drag and drop feedback color for the panel sections. The color should have transparency so that the panel sections can still shine through. Panels are shown below the editor area and contain views like output and integrated terminal.
@@ -1014,7 +1039,6 @@ The following customizations are available:
 - `testing.iconSkipped.retired`: Retired color for the 'Skipped' icon in the test explorer.
 - `testing.peekBorder`: Color of the peek view borders and arrow.
 - `testing.peekHeaderBackground`: Color of the peek view borders and arrow.
-- `testing.message.error.decorationForeground`: Text color of test error messages shown inline in the editor.
 - `testing.message.error.lineBackground`: Margin color beside error messages shown inline in the editor.
 - `testing.message.info.decorationForeground`: Text color of test info messages shown inline in the editor.
 - `testing.message.info.lineBackground`: Margin color beside info messages shown inline in the editor.
@@ -1029,6 +1053,9 @@ The following customizations are available:
 - `testing.uncoveredGutterBackground`: Gutter color of regions where code not covered.
 - `testing.coverCountBadgeBackground`: Background for the badge indicating execution count
 - `testing.coverCountBadgeForeground`: Foreground for the badge indicating execution count
+- `testing.message.error.badgeBackground`: Background color of test error messages shown inline in the editor.
+- `testing.message.error.badgeBorder`: Border color of test error messages shown inline in the editor.
+- `testing.message.error.badgeForeground`: Text color of test error messages shown inline in the editor.
 
 ## Welcome page colors
 
@@ -1054,6 +1081,7 @@ The following customizations are available:
 - `gitDecoration.ignoredResourceForeground`: Color for ignored Git resources. Used for file labels and the SCM viewlet.
 - `gitDecoration.conflictingResourceForeground`: Color for conflicting Git resources. Used for file labels and the SCM viewlet.
 - `gitDecoration.submoduleResourceForeground`: Color for submodule resources.
+- `git.blame.editorDecorationForeground`: Color for the blame editor decoration.
 
 ## Source Control Graph colors
 
@@ -1215,6 +1243,9 @@ The theme colors for symbol icons that appears in the Outline view, breadcrumb n
 - `charts.orange`: Color for orange elements in charts.
 - `charts.green`: Color for green elements in charts.
 - `charts.purple`: Color for purple elements in charts.
+- `chart.line`: Line color for the chart.
+- `chart.axis`: Axis color for the chart.
+- `chart.guide`: Guide line for the chart.
 
 ## Ports Colors
 
